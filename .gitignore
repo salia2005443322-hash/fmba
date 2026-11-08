@@ -1,0 +1,8 @@
+*.dmp
+*.ipynb
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/
+*.zip
