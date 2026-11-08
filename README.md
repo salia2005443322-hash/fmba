@@ -2,16 +2,21 @@
 
 ```
 .
+├── README.md
+├── requirements.txt
 ├── data/
-│   ├── primers_test.fasta
-│   └── resp1-1201107674_S85.merged.tsv
+│   ├── primers_test.fasta                    
+│   ├── resp1-1201107674_S85.merged.tsv       
+│   └── taxdump/
+│       └── taxdump.tar.gz                    
 ├── task1/
 │   ├── task1.py
-│   └── results/task1_thermo.xlsx
-├── task2/
-│   ├── task2.py
-│   └── results/task2.xlsx
-└── taxdump/          
+│   └── results/
+│       └── task1.xlsx
+└── task2/
+    ├── task2.py
+    └── results/
+        └── task2.xlsx
 ```
 
 
