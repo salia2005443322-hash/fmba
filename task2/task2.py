@@ -28,9 +28,11 @@ for taxid in set(acc_to_taxid.values()):
     taxes.append(row)
 
 taxonomy = pd.DataFrame(taxes)
-taxonomy = taxonomy[taxonomy['species'] != 'Sinsheimervirus phiX174'].reset_index(drop=True)
 
-sp_taxonomy = (taxonomy.drop(columns='taxid').drop_duplicates(subset='species').reset_index(drop=True))
+sp_ranks = ['superkingdom', 'realm', 'kingdom', 'phylum', 'class',
+         'order', 'family', 'genus', 'species']
+sp_taxonomy = (taxonomy.reindex(columns=sp_ranks).dropna(axis=1, how='all').drop_duplicates(subset='species').reset_index(drop=True))
+
 
 blast_res['taxid'] = blast_res['sseqid'].map(acc_to_taxid)
 virus_blast = blast_res.merge(taxonomy, on='taxid')

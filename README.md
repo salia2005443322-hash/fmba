@@ -88,7 +88,6 @@ tar -xzf data/taxdump/taxdump.tar.gz -C data/taxdump nodes.dmp names.dmp merged.
 - `share_virus` — от числа прочтений с вирусными хитами, состав вирусной части
 - `share_all` — от числа прочтений, у которых вообще есть хоть одно выравнивание в выдаче
 
-`Sinsheimervirus phiX174` пришедший как контроль в постановке Illumina исключён из рассчета.
 
 ### Выдача
 
